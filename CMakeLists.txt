@@ -4,7 +4,7 @@ project(${PROJECT_NAME})
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(${PROJECT_NAME} src/main.cpp headers/game_state.hpp src/game.cpp headers/game.hpp src/game_state_start.cpp headers/game_state_start.hpp src/game_state_editor.cpp headers/game_state_editor.hpp src/texture_manager.cpp headers/texture_manager.hpp)
+add_executable(${PROJECT_NAME} src/main.cpp headers/game_state.hpp src/game.cpp headers/game.hpp src/game_state_start.cpp headers/game_state_start.hpp src/game_state_editor.cpp headers/game_state_editor.hpp src/texture_manager.cpp headers/texture_manager.hpp src/animation_handler.cpp headers/animation_handler.hpp)
 
 include_directories(headers /usr/include C:/SFML/include)
 
