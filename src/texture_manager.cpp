@@ -10,6 +10,6 @@ void TextureManager::LoadTexture(const std::string &name, const std::string &fil
     textures[name] = tex;
 }
 
-sf::Texture &TextureManager::getRef(const std::string &textureName) {
+sf::Texture &TextureManager::GetRef(const std::string &textureName) {
     return textures.at(textureName);
 }

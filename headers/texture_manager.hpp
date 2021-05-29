@@ -20,7 +20,7 @@ public:
     void LoadTexture(const std::string& name, const std::string& filePath);
 
     /// Translate an id into a reference
-    sf::Texture& getRef(const std::string& textureName);
+    sf::Texture& GetRef(const std::string& textureName);
 
     TextureManager() {}
 };
