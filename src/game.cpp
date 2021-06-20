@@ -5,11 +5,11 @@
 #include "game_state.hpp"
 
 Game::Game() {
-    loadTextures();
-    loadTiles();
     window.create(sf::VideoMode(800, 600), "SF City");
     window.setFramerateLimit(60);
 
+    loadTextures();
+    loadTiles();
     background.setTexture(textureManager.GetRef("background"));
 }
 

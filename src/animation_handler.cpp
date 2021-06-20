@@ -1,5 +1,5 @@
 //
-// Created by ajink on 25-05-2021.
+// Created by Ajinkya on 25-05-2021.
 //
 
 #include "animation_handler.hpp"
@@ -16,14 +16,14 @@ void AnimationHandler::Update(const float dt) {
     if(int((t + dt) / currentAnimDuration) > int(t / currentAnimDuration))
     {
         /* Calculate the frame number */
-        int frame = int((t + dt) / currentAnimDuration);
+        unsigned int frame = int((t + dt) / currentAnimDuration);
 
         /* remainder trick to loop in frame */
         frame %= animations[currentAnim].GetLength();
 
         /* Set the sprite to the new frame */
         sf::IntRect rect = FrameSize;
-        rect.left = rect.width * frame;
+        rect.left = rect.width * int(frame);
         rect.top = rect.height * currentAnim;
         Bounds = rect;
     }
@@ -32,7 +32,7 @@ void AnimationHandler::Update(const float dt) {
     t += dt;
 
     /* Adjust for looping */
-    if(t > currentAnimDuration * animations[currentAnim].GetLength())
+    if(t > currentAnimDuration * float(animations[currentAnim].GetLength()))
     {
         t = 0.0f;
     }
